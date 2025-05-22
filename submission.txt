@@ -1,0 +1,48 @@
+# Cara Menjalankan ETL Pipeline
+# ========================
+
+1. Menjalankan ETL Pipeline
+--------------------------
+```bash
+python main.py
+```
+
+2. Menjalankan Unit Test
+-----------------------
+```bash
+# Menjalankan semua test
+pytest test/
+
+# Menjalankan test coverage 
+pytest --cov=utils test/
+
+3. Persiapan Database
+-------------------
+- Buat database PostgreSQL dengan nama 'fashion_db'
+- Sesuaikan kredensial database di berkas main.py:
+  ```python
+  DB_CONNECTION = "postgresql://postgres:your_password@localhost:5432/fashion_db"
+  ```
+note : ubah password sesuai password anda masing masing di postgresql.
+
+4. Persiapan Berkas Kredensial
+----------------------------
+Berkas google-sheets-api.json sudah disertakan dalam file submission.
+Tidak diperlukan setup tambahan karena semua kredensial yang diperlukan sudah disediakan.
+
+5. Instalasi Dependensi
+---------------------
+Jalankan perintah berikut untuk menginstal semua package yang diperlukan:
+```bash
+pip install -r requirements.txt
+```
+
+6. Struktur Direktori
+-------------------
+Pastikan struktur direktori sudah sesuai:
+- Semua file test berada di direktori test/
+- File implementasi berada di direktori utils/
+- Berkas google-sheets-api.json berada di direktori utama
+
+# URL Google Sheets:
+https://docs.google.com/spreadsheets/d/1F3pS1Hcb7GzH-QJEfuCxotGJ806mEEwUzY3940r1sOY

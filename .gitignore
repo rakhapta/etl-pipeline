@@ -1,0 +1,4 @@
+*.log
+google-sheets-api.json
+.env/
+.pytest_cache/
